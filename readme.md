@@ -1,3 +1,8 @@
+[Overview](#Ohhh-Decisions)
+[Install](#Installation)
+[Usage](#Usage)
+[Contribute](#Contributing)
+
 # Ohhh Decisions
 
 This app is for any group of 2+ people to make decision making easier.
