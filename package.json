@@ -1,0 +1,19 @@
+{
+  "name": "ohhhdecisions",
+  "version": "1.0.0",
+  "description": "makes decisions simple",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobefranklyspeaking/ohhhdecisions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tobefranklyspeaking/ohhhdecisions/issues"
+  },
+  "homepage": "https://github.com/tobefranklyspeaking/ohhhdecisions#readme"
+}
