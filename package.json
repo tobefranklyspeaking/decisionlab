@@ -1,13 +1,15 @@
 {
   "name": "ohhhdecisions",
   "version": "1.0.0",
-  "description": "makes decisions simple",
+  "description": "Helps make decisions simple",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon server/index.js",
+    "react-dev": "webpack -d --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Frank Gauss",
+  "license": "UNLICENSED",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tobefranklyspeaking/ohhhdecisions.git"
@@ -18,15 +20,21 @@
   "homepage": "https://github.com/tobefranklyspeaking/ohhhdecisions#readme",
   "dependencies": {
     "axios": "^0.21.1",
-    "babel": "^6.23.0",
-    "express": "^4.17.1",
-    "nodemon": "^2.0.12",
-    "react": "^17.0.2"
+    "eslint": "^7.32.0",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.14.8",
     "@babel/core": "^7.15.0",
+    "@babel/plugin-transform-runtime": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
-    "@webpack-cli/generators": "^1.1.0",
-    "babel-loader": "^8.2.2"
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "nodemon": "^2.0.12",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
   }
 }

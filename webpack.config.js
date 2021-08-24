@@ -1,23 +1,43 @@
-const path = require('path');
-var DIST_DIR = path.join(__dirname, '/client/public');
+var path = require('path');
+
 var SRC_DIR = path.join(__dirname, '/client/src');
+var DIST_DIR = path.join(__dirname, '/client/public');
 
 module.exports = {
-  entry: `${SRC_DIR}/index.jsx`,
+  mode: 'development',
+  entry: `${SRC_DIR}/index.js`,
   output: {
+    path: DIST_DIR,
     filename: 'bundle.js',
-    path: DIST_DIR
   },
   module: {
     rules: [
       {
-        test: [/\.jsx$/],
+        test: /\.(js|jsx)?/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['env', 'react'],
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [
+              "@babel/preset-env",
+              "@babel/preset-react"
+            ],
+            plugins: [
+              ["@babel/plugin-transform-runtime",
+                {
+                  "regenerator": true
+                }
+              ]
+            ]
+          }
         }
       }
     ]
-  }
+  },
+  resolve: {
+    extensions: ['*', '.js']
+  },
+  // devServer: {
+  //   contentBase: path.resolve(__dirname, './dist'),
+  // },
 };

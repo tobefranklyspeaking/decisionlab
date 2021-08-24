@@ -1,7 +1,34 @@
+* {
+  font-family: 'Sora', sans-serif;
+}
+
+body, button, div, .options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f2f3d9;
+  flex-direction: column;
+}
+
 body {
-  background: radial-gradient(#302b63, #24243e);
+  background: #030027;
   width: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: 'Sora', sans-serif;
+}
+
+button {
+  background-color: #656256;
+  border: none;
+  border-radius: 30px;
+  padding: 3vh 5vh 3vh 5vh;
+  margin: 2vh 2vh 2vh 2vh;
+  width: auto;
+  height: auto;
+  font-size: 3vh;
+}
+
+.pageGreeting {
+  font-size: 4vh;
 }
