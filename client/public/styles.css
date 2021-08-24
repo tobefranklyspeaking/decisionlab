@@ -24,11 +24,14 @@ button {
   border-radius: 30px;
   padding: 3vh 5vh 3vh 5vh;
   margin: 2vh 2vh 2vh 2vh;
-  width: auto;
+  width: 100%;
   height: auto;
   font-size: 3vh;
 }
 
 .pageGreeting {
+  background-color: #721817;
+  border-radius: 30px;
+  padding: 4vh;
   font-size: 4vh;
 }

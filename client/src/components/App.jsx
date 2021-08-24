@@ -22,7 +22,7 @@ class App extends React.Component {
       <div id='nav'>
         {
           this.state.welcomeVisible
-          ? <button onClick={this.toggleWelcomeVisible}>Welcome</button>
+          ? <button onClick={this.toggleWelcomeVisible}>Welcome, lets make some decisions</button>
           : <Options/>
         }
 
