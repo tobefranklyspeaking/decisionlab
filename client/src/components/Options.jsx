@@ -13,14 +13,16 @@ class Options extends React.Component {
       showCoinFlip: false,
       showRandomChoice: false,
       showRandomActivity: false,
-      showAdvice: false
+      showAdvice: false,
+      showButtons: true
     }
 
     this.hideComponent = this.hideComponent.bind(this);
   }
 
   hideComponent(e) {
-    e.preventDefault();
+    this.setState({ showButtons: false });
+
     switch (e.target.value) {
       case "showMultiple":
         this.setState({ showMultiple: true });
@@ -40,38 +42,28 @@ class Options extends React.Component {
       default:
         null;
     }
-    console.log(e.target.value, this.state)
   }
 
   render() {
     return (
       <div className='main'>
         <div className='options'>
+          {this.state.showMultiple && <ShowMultiple />}
+          {this.state.showCoinFlip && <CoinFlip />}
+          {this.state.showRandomChoice && <RandomChoice />}
+          {this.state.showRandomActivity && <RandomActivity />}
+          {this.state.showAdvice && <Advice />}
           {
-            showMultiple
-              ? <ShowMultiple />
-              : <button value="showMultiple" onClick={this.hideComponent}>I'll help you decide</button>
-          }
-
-          {
-            showCoinFlip
-              ? <CoinFlip />
-              : <button value="showCoinFlip" onClick={this.hideComponent}>Let's flip a coin</button>
-          }
-          {
-            showRandomChoice
-              ? <RandomChoice/>
-              : <button value="showRandomChoice" onClick={this.hideComponent}>Let us make the choice</button>
-          }
-          {
-            showRandomActivity
-              ? <RandomActivity/>
-              : <button value="showRandomActivity" onClick={this.hideComponent}>Bored? Random Activity</button>
-          }
-          {
-            showAdvice
-              ? <Advice/>
-              : <button value="showAdvice" onClick={this.hideComponent}>Need advice?</button>
+            this.state.showButtons &&
+            (
+              <div>
+                <button value="showMultiple" onClick={this.hideComponent}>I'll help you decide</button>
+                <button value="showCoinFlip" onClick={this.hideComponent}>Let's flip a coin</button>
+                <button value="showRandomChoice" onClick={this.hideComponent}>Let us make the choice</button>
+                <button value="showRandomActivity" onClick={this.hideComponent}>Bored? Random Activity</button>
+                <button value="showAdvice" onClick={this.hideComponent}>Need advice?</button>
+              </div>
+            )
           }
         </div>
       </div>

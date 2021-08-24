@@ -13,19 +13,21 @@ class CoinFlip extends React.Component {
   coinFlip() {
     let option = Math.floor(Math.random() * 2) === 0;
     if (option) {
-      this.setState({ sideShowing: 'heads'})
+      this.setState({ sideShowing: 'heads' })
     } else {
-      this.setState({ sideShowing: 'tails'})
+      this.setState({ sideShowing: 'tails' })
     }
   }
 
   render() {
-    <div>
-      { Math.floor(Math.random() * 2) === 0
-        ? <div>Heads</div>
-        : <div>Tails</div>
-      }
-    </div>
+    return (
+      <div>
+        {Math.floor(Math.random() * 2) === 0
+          ? <div className='fadeIn'>Heads</div>
+          : <div className='fadeIn'>Tails</div>
+        }
+      </div>
+    )
   }
 }
 

@@ -2,7 +2,7 @@
   font-family: 'Sora', sans-serif;
 }
 
-body, button, div, .options {
+body, button, div, .options, #coin {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,4 +34,22 @@ button {
   border-radius: 30px;
   padding: 4vh;
   font-size: 4vh;
+}
+
+.coin {
+  background-color: #721817;
+}
+
+.fadeOut{
+  opacity:0;
+  width:0;
+  height:0;
+  transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+}
+
+.fadeIn{
+  opacity:1;
+  width:100px;
+  height:100px;
+  transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
 }
