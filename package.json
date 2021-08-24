@@ -15,5 +15,18 @@
   "bugs": {
     "url": "https://github.com/tobefranklyspeaking/ohhhdecisions/issues"
   },
-  "homepage": "https://github.com/tobefranklyspeaking/ohhhdecisions#readme"
+  "homepage": "https://github.com/tobefranklyspeaking/ohhhdecisions#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "babel": "^6.23.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@webpack-cli/generators": "^1.1.0",
+    "babel-loader": "^8.2.2"
+  }
 }

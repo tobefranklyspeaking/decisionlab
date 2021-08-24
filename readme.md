@@ -1,7 +1,7 @@
-[Overview](#Ohhh-Decisions)
-[Install](#Installation)
-[Usage](#Usage)
-[Contribute](#Contributing)
+- [Overview](#Ohhh-Decisions)
+- [Install](#Installation)
+- [Usage](#Usage)
+- [Contribute](#Contributing)
 
 # Ohhh Decisions
 
