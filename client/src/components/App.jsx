@@ -14,7 +14,6 @@ class App extends React.Component {
 
   toggleWelcomeVisible() {
     this.setState({ welcomeVisible: false });
-    console.log('clicked')
   }
 
   render() {

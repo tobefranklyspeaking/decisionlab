@@ -2,12 +2,13 @@
   font-family: 'Sora', sans-serif;
 }
 
-body, button, div, .options, #coin {
+body, button, div, .options, #coin, form, input, a {
   display: flex;
   align-items: center;
   justify-content: center;
   color: #f2f3d9;
   flex-direction: column;
+  border-radius: 5vh;
 }
 
 body {
@@ -21,7 +22,6 @@ body {
 button {
   background-color: #656256;
   border: none;
-  border-radius: 30px;
   padding: 3vh 5vh 3vh 5vh;
   margin: 2vh 2vh 2vh 2vh;
   width: 100%;
@@ -32,7 +32,6 @@ button {
 
 .pageGreeting {
   background-color: #721817;
-  border-radius: 30px;
   padding: 4vh;
   font-size: 4vh;
 }
@@ -53,4 +52,18 @@ button {
   width:100px;
   height:100px;
   transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
+}
+
+form {
+  background-color: #151E3F;
+  border-radius: 4v
+}
+
+input {
+  background-color: #656256;
+  color: #F2F3D9;
+}
+
+a:hover {
+  color: blue;
 }

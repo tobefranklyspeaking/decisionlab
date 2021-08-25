@@ -48,9 +48,9 @@ class Options extends React.Component {
     return (
       <div className='main'>
         <div className='options'>
+          {this.state.showRandomChoice && <RandomChoice />}
           {this.state.showMultiple && <ShowMultiple />}
           {this.state.showCoinFlip && <CoinFlip />}
-          {this.state.showRandomChoice && <RandomChoice />}
           {this.state.showRandomActivity && <RandomActivity />}
           {this.state.showAdvice && <Advice />}
           {

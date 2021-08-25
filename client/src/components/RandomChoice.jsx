@@ -10,19 +10,29 @@ class RandomChoice extends React.Component {
       option4: '',
       option5: '',
       option6: '',
-      showForm: true
+      showForm: true,
+      choice: '',
+      options: []
     }
     this.choose = this.choose.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(e, num) {
-    e.preventDefault();
     this.setState({ [`option${num}`]: e.target.value })
   }
 
-  choose() {
-    return Math.floor(Math.random() * 6);
+  choose(e) {
+    console.log('clicked ------ ', e.target.value)
+    e.preventDefault();
+    let optionKeys = Object.keys(this.state);
+    for (var i = 5; i >= 0; i--) {
+      if (this.state[optionKeys[i]].length) {
+        this.state.options.push(this.state[optionKeys[i]]);
+      }
+    }
+    let randomOption = Math.floor(Math.random() * this.state.options.length);
+    this.setState({ choice: this.state.options[randomOption], showForm: false });
   }
 
   render() {
@@ -61,12 +71,13 @@ class RandomChoice extends React.Component {
                 onChange={(e) => this.handleChange(e, '6')}
                 placeholer="Enter option here"
               />
-              <div>
-                <button className='coin' placeholder='Lets Gooooo' onClick={this.choose}>Lets Goooooo</button>
-              </div>
+                <button
+                  className='coin'
+                  onClick={this.choose}>
+                  </button>
             </form>
           </div>
-        : <div>{ }</div>
+        : <div>{this.state.choice ? this.state.choice : 'Try again'}</div>
     )
   }
 }
