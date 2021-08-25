@@ -47,7 +47,7 @@ const getOptions = async (req, res) => {
 }
 
 const insertPerson = async (req, res) => {
-  const { name } = req.query;
+  const { name } = req.body;
 
   await pool.query(`
     INSERT INTO
@@ -60,8 +60,7 @@ const insertPerson = async (req, res) => {
 };
 
 const insertOptions = async(req, res) => {
-  const { option, rating } = req.query;
-  const { name } = req.params;
+  const { option, rating, name } = req.body;
 
   await pool.query(`
     INSERT INTO

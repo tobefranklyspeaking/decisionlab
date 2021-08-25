@@ -23,7 +23,6 @@ class RandomChoice extends React.Component {
   }
 
   choose(e) {
-    console.log('clicked ------ ', e.target.value)
     e.preventDefault();
     let optionKeys = Object.keys(this.state);
     for (var i = 5; i >= 0; i--) {

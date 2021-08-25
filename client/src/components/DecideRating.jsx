@@ -1,86 +1,135 @@
 import React from 'react';
+import Selector from './Select.jsx';
+import Dropdown from './Dropdown.jsx';
+import Names from './Names.jsx';
 
 class DecideRating extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      name1: '',
+      name2: '',
+      name3: '',
+      name4: '',
       option1: '',
       option2: '',
       option3: '',
       option4: '',
-      option5: '',
-      option6: '',
-      showForm: true,
+      rating1: '',
+      rating2: '',
+      rating3: '',
+      rating4: '',
+      showForm: false,
       choice: '',
       options: []
     }
-    this.choose = this.choose.bind(this);
+    this.process = this.process.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.select = this.select.bind(this);
   }
 
-  handleChange(e, num) {
-    this.setState({ [`option${num}`]: e.target.value })
+  handleChange(e, choice) {
+    this.setState({ [choice]: e.target.value })
   }
 
-  choose(e) {
+  process(e) {
     console.log('clicked ------ ', e.target.value)
     e.preventDefault();
     let optionKeys = Object.keys(this.state);
-    for (var i = 5; i >= 0; i--) {
+    for (var i = 9; i >= 5; i--) {
       if (this.state[optionKeys[i]].length) {
         this.state.options.push(this.state[optionKeys[i]]);
       }
     }
+
+    //iterate through optionKeys
+    //if (this.state)
+
+    let total = 0;
+    // let total =
     let randomOption = Math.floor(Math.random() * this.state.options.length);
     this.setState({ choice: this.state.options[randomOption], showForm: false });
+  }
+
+
+  getOccurrence() {
+
+  }
+
+  select() {
+
   }
 
   render() {
     return (
       this.state.showForm
-        ? <div className='options'>
-          <label>Enter your options below and I will choose for you!</label>
+        ?
+        <div className='options'>
+          <label>Select and rate each option</label>
           <form>
-            <input
-              value={this.state.option1}
-              onChange={(e) => this.handleChange(e, '1')}
-              placeholer="Enter option here"
-            />
-            <input
-              value={this.state.option2}
-              onChange={(e) => this.handleChange(e, '2')}
-              placeholer="Enter option here"
-            />
-            <input
-              value={this.state.option3}
-              onChange={(e) => this.handleChange(e, '3')}
-              placeholer="Enter option here"
-            />
-            <input
-              value={this.state.option4}
-              onChange={(e) => this.handleChange(e, '4')}
-              placeholer="Enter option here"
-            />
-            <input
-              value={this.state.option5}
-              onChange={(e) => this.handleChange(e, '5')}
-              placeholer="Enter option here"
-            />
-            <input
-              value={this.state.option6}
-              onChange={(e) => this.handleChange(e, '6')}
-              placeholer="Enter option here"
-            />
+            <Dropdown props={this.state}/>
+            <Selector className='nameOption' />
+            <Dropdown />
+            <Selector className='nameOption' />
+            <Dropdown />
+            <Selector className='nameOption' />
+            <Dropdown />
+            <Selector className='nameOption' />
             <button
               className='coin'
-              onClick={this.choose}>
+              onClick={this.process}>
               Click me so you know what you're doing
             </button>
           </form>
         </div>
-        : <div>{this.state.choice ? this.state.choice : 'Try again'}</div>
+        : <Names/>
     )
   }
 }
 
 export default DecideRating;
+
+
+{/* <div className='nameOption'>
+              <label>2</label>
+              <input
+                value={this.state.option2}
+                onChange={(e) => this.handleChange(e, 'option2')}
+                placeholder="Enter option here"
+              />
+            </div>
+
+<div className='nameOption'>
+<label>3</label>
+<input
+  value={this.state.option3}
+  onChange={(e) => this.handleChange(e, 'option3')}
+  placeholder="Enter option here"
+/>
+</div>
+            <div className='nameOption'>
+            <label>3</label>
+            <input
+              value={this.state.option3}
+              onChange={(e) => this.handleChange(e, 'option3')}
+              placeholder="Enter option here"
+            />
+          </div>
+
+          <div className='nameOption'>
+              <label>4</label>
+              <input
+                value={this.state.option4}
+                onChange={(e) => this.handleChange(e, 'option4')}
+                placeholder="Enter option here"
+              />
+            </div>
+
+            <div className='nameOption'>
+              <label>5</label>
+              <input
+                value={this.state.option5}
+                onChange={(e) => this.handleChange(e, 'option5')}
+                placeholder="Enter option here"
+              />
+            </div> */}

@@ -9,7 +9,7 @@ body, button, div, .options, #coin, form, input, a {
   color: #FFFBFF;
   flex-direction: column;
   border-radius: 5vh;
-  font-size: 3vh;
+  font-size: 2vh;
 }
 
 body {
@@ -77,4 +77,36 @@ a:hover {
 button:hover {
   color: #002E1A;
   background-color: hsla(0, 100%, 99%, 80%);
+}
+
+.nameOption {
+  display: flex;
+  flex-direction: row;
+}
+.options {
+  margin: none;
+  padding: 5vh 0 5vh 0;
+}
+.options button[type=radio] {
+  width: .5vh;
+  height: .5vh;
+  padding: 3vh;
+  color: hsl(48, 100%, 50%);
+  margin: .5vh;
+  align-content: center;
+  font-size: 2vh;
+}
+.options label {
+  font-size: 4vh;
+  background-color: hsla(48, 100%, 50%, 70%);
+  padding: 1vh;
+  border-radius: 5vh;
+}
+
+#dropdownMenuButton1 {
+  background-color: hsla(154, 100%, 9%, 70%);
+  border-radius: 5vh;
+  font-size: 2vh;
+  margin-bottom: 1vh;
+  padding: 2vh;
 }

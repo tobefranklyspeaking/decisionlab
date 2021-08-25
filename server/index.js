@@ -16,8 +16,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/name/:name', db.getPerson);
 app.get('/options/:name', db.getOptions);
 
-app.post('/name/:name', db.insertPerson);
-app.post('/options/:name', db.insertOptions);
+app.post('/name', db.insertPerson);
+app.post('/options', db.insertOptions);
 
 /******************** Get from BoredAPI **********************/
 

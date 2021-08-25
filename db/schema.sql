@@ -15,15 +15,3 @@ create table if not exists options (
   constraint valid_number
     check (rating <= 10 AND rating > 0)
 );
-
-    INSERT INTO
-      options (each_option, rating, person_id)
-    VALUES
-      ('burgers n beer', 8,
-      ( SELECT
-          id
-        FROM
-          person
-        WHERE
-          name = 'frank'
-      ))

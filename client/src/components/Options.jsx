@@ -22,10 +22,10 @@ class Options extends React.Component {
 
   hideComponent(e) {
     this.setState({ showButtons: false });
-
+    console.log(e.target.value);
     switch (e.target.value) {
-      case 'DecideRating':
-        this.setState({ DecideRating: true });
+      case 'decideRating':
+        this.setState({ decideRating: true });
         break;
       case 'showCoinFlip':
         this.setState({ showCoinFlip: true });
@@ -57,7 +57,7 @@ class Options extends React.Component {
             this.state.showButtons &&
             (
               <div>
-                <button value='showMultiple' onClick={this.hideComponent}>I'll help you decide</button>
+                <button value='decideRating' onClick={this.hideComponent}>I'll help you decide</button>
                 <button value='showCoinFlip' onClick={this.hideComponent}>Flip a coin</button>
                 <button value='showRandomChoice' onClick={this.hideComponent}>Let us make the choice</button>
                 <button value='showRandomActivity' onClick={this.hideComponent}>Bored? Random Activity</button>
