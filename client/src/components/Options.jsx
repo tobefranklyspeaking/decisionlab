@@ -1,6 +1,6 @@
 import React from 'react';
 import CoinFlip from './CoinFlip.jsx';
-import DecideRating from './DecideRating.jsx';
+import Names from './Names.jsx';
 import RandomChoice from './RandomChoice.jsx';
 import RandomActivity from './RandomActivity.jsx';
 import Advice from './Advice.jsx';
@@ -9,7 +9,7 @@ class Options extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      decideRating: false,
+      showNames: false,
       showCoinFlip: false,
       showRandomChoice: false,
       showRandomActivity: false,
@@ -24,8 +24,8 @@ class Options extends React.Component {
     this.setState({ showButtons: false });
     console.log(e.target.value);
     switch (e.target.value) {
-      case 'decideRating':
-        this.setState({ decideRating: true });
+      case 'showNames':
+        this.setState({ showNames: true });
         break;
       case 'showCoinFlip':
         this.setState({ showCoinFlip: true });
@@ -49,7 +49,7 @@ class Options extends React.Component {
       <div className='main'>
         <div className='options'>
           {this.state.showRandomChoice && <RandomChoice />}
-          {this.state.decideRating && <DecideRating />}
+          {this.state.showNames && <Names />}
           {this.state.showCoinFlip && <CoinFlip />}
           {this.state.showRandomActivity && <RandomActivity />}
           {this.state.showAdvice && <Advice />}
@@ -57,7 +57,7 @@ class Options extends React.Component {
             this.state.showButtons &&
             (
               <div>
-                <button value='decideRating' onClick={this.hideComponent}>I'll help you decide</button>
+                <button value='showNames' onClick={this.hideComponent}>I'll help you decide</button>
                 <button value='showCoinFlip' onClick={this.hideComponent}>Flip a coin</button>
                 <button value='showRandomChoice' onClick={this.hideComponent}>Let us make the choice</button>
                 <button value='showRandomActivity' onClick={this.hideComponent}>Bored? Random Activity</button>

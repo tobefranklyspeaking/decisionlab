@@ -1,7 +1,7 @@
 import React from 'react';
-import AddChoices from './AddChoices.jsx';
+import DecideRating from './DecideRating.jsx';
 
-class Names extends React.Component {
+class AddChoices extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -9,9 +9,6 @@ class Names extends React.Component {
       name2: '',
       name3: '',
       name4: '',
-      showName: true,
-      showRatings: false,
-      showChoices: false,
       list: [],
       options: []
     }
@@ -38,15 +35,17 @@ class Names extends React.Component {
         temp1.push(this.state[temp[i]]);
       }
     }
-    this.setState({ 'options': temp1 })
-    this.setState({ 'showName': false })
-    this.setState({ 'showChoices': true });
+    this.setState ({ 'options': temp1 })
+    setTimeout(() =>
+    this.setState ({ [this.props.showChoices]: false })
+    , 250);
+    this.setState({ [this.showRatings]: true });
   }
 
 
   render() {
     return (
-      this.state.showName
+      this.props.showChoices
         ?  <div className='names'>
             <label>Enter your name(s)</label>
             <form>
@@ -77,9 +76,9 @@ class Names extends React.Component {
                   </button>
             </form>
           </div>
-        : <AddChoices showRatings={this.state.showRatings} />
+        : <DecideRating showRatings={this.props.showRatings}/>
     )
   }
 }
 
-export default Names;
+export default AddChoices;

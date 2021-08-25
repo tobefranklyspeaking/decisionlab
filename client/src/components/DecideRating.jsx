@@ -19,7 +19,6 @@ class DecideRating extends React.Component {
       rating2: '',
       rating3: '',
       rating4: '',
-      showForm: false,
       choice: '',
       options: []
     }
@@ -48,7 +47,7 @@ class DecideRating extends React.Component {
     let total = 0;
     // let total =
     let randomOption = Math.floor(Math.random() * this.state.options.length);
-    this.setState({ choice: this.state.options[randomOption], showForm: false });
+    this.setState({ choice: this.state.options[randomOption], [this.showRatings]: false });
   }
 
 
@@ -62,12 +61,12 @@ class DecideRating extends React.Component {
 
   render() {
     return (
-      this.state.showForm
+      this.props.showRatings
         ?
         <div className='options'>
           <label>Select and rate each option</label>
           <form>
-            <Dropdown props={this.state}/>
+            <Dropdown props={this.state} />
             <Selector className='nameOption' />
             <Dropdown />
             <Selector className='nameOption' />
@@ -82,7 +81,7 @@ class DecideRating extends React.Component {
             </button>
           </form>
         </div>
-        : <Names/>
+        : <div>Your best option is {console.log(this.props)}</div>
     )
   }
 }
