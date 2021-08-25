@@ -1,7 +1,6 @@
 import React from 'react';
 import Selector from './Select.jsx';
 import Dropdown from './Dropdown.jsx';
-import Names from './Names.jsx';
 
 class DecideRating extends React.Component {
   constructor(props) {
@@ -32,7 +31,6 @@ class DecideRating extends React.Component {
   }
 
   process(e) {
-    console.log('clicked ------ ', e.target.value)
     e.preventDefault();
     let optionKeys = Object.keys(this.state);
     for (var i = 9; i >= 5; i--) {
@@ -47,7 +45,8 @@ class DecideRating extends React.Component {
     let total = 0;
     // let total =
     let randomOption = Math.floor(Math.random() * this.state.options.length);
-    this.setState({ choice: this.state.options[randomOption], [this.showRatings]: false });
+    this.setState({ choice: this.state.options[randomOption]});
+    this.props.handleChildChange('showRatings', false);
   }
 
 
@@ -77,58 +76,13 @@ class DecideRating extends React.Component {
             <button
               className='coin'
               onClick={this.process}>
-              Click me so you know what you're doing
+              Lets reveal the best option!
             </button>
           </form>
         </div>
-        : <div>Your best option is {console.log(this.props)}</div>
+        : <div className='Final'>Your best option is Taco Bell</div>
     )
   }
 }
 
 export default DecideRating;
-
-
-{/* <div className='nameOption'>
-              <label>2</label>
-              <input
-                value={this.state.option2}
-                onChange={(e) => this.handleChange(e, 'option2')}
-                placeholder="Enter option here"
-              />
-            </div>
-
-<div className='nameOption'>
-<label>3</label>
-<input
-  value={this.state.option3}
-  onChange={(e) => this.handleChange(e, 'option3')}
-  placeholder="Enter option here"
-/>
-</div>
-            <div className='nameOption'>
-            <label>3</label>
-            <input
-              value={this.state.option3}
-              onChange={(e) => this.handleChange(e, 'option3')}
-              placeholder="Enter option here"
-            />
-          </div>
-
-          <div className='nameOption'>
-              <label>4</label>
-              <input
-                value={this.state.option4}
-                onChange={(e) => this.handleChange(e, 'option4')}
-                placeholder="Enter option here"
-              />
-            </div>
-
-            <div className='nameOption'>
-              <label>5</label>
-              <input
-                value={this.state.option5}
-                onChange={(e) => this.handleChange(e, 'option5')}
-                placeholder="Enter option here"
-              />
-            </div> */}

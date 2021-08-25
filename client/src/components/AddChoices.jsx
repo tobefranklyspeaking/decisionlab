@@ -5,26 +5,26 @@ class AddChoices extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name1: '',
-      name2: '',
-      name3: '',
-      name4: '',
+      choice1: '',
+      choice2: '',
+      choice3: '',
+      choice4: '',
       list: [],
       options: []
     }
-    this.submitNames = this.submitNames.bind(this);
+    this.submitOptions = this.submitOptions.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(e, num) {
-    this.setState({ [`name${num}`]: e.target.value })
+    this.setState({ [`choice${num}`]: e.target.value })
   }
 
-  submitNames(e) {
+  submitOptions(e) {
     e.preventDefault();
     let temp = [];
     for (let each in this.state) {
-      if (each.includes('name')) {
+      if (each.includes('option')) {
         temp.push(each)
       }
     }
@@ -35,11 +35,12 @@ class AddChoices extends React.Component {
         temp1.push(this.state[temp[i]]);
       }
     }
+    const choiceState = this.props.showChoices;
+    let ratingsState = this.props.showRatings;
+
     this.setState ({ 'options': temp1 })
-    setTimeout(() =>
-    this.setState ({ [this.props.showChoices]: false })
-    , 250);
-    this.setState({ [this.showRatings]: true });
+    this.props.handleChildChange('showChoices', false);
+    this.props.handleChildChange('showRatings', true);
   }
 
 
@@ -47,36 +48,36 @@ class AddChoices extends React.Component {
     return (
       this.props.showChoices
         ?  <div className='names'>
-            <label>Enter your name(s)</label>
+            <label>Enter your options</label>
             <form>
               <input
-                value={this.state.name1}
+                value={this.state.choice1}
                 onChange={(e) => this.handleChange(e, '1')}
-                placeholder="Enter name here"
+                placeholder="Enter choice here"
               />
               <input
-                value={this.state.name2}
+                value={this.state.choice2}
                 onChange={(e) => this.handleChange(e, '2')}
-                placeholder="Enter name here"
+                placeholder="Enter choice here"
               />
               <input
-                value={this.state.name3}
+                value={this.state.choice3}
                 onChange={(e) => this.handleChange(e, '3')}
-                placeholder="Enter name here"
+                placeholder="Enter choice here"
               />
               <input
-                value={this.state.name4}
+                value={this.state.choice4}
                 onChange={(e) => this.handleChange(e, '4')}
-                placeholder="Enter name here"
+                placeholder="Enter choice here"
               />
                 <button
                   className='coin'
-                  onClick={this.submitNames}>
-                    Submit names and move onto rankings
+                  onClick={this.submitOptions}>
+                    Submit options and move onto rankings
                   </button>
             </form>
           </div>
-        : <DecideRating showRatings={this.props.showRatings}/>
+        : <DecideRating handleChildChange={this.props.handleChildChange} showRatings={this.props.showRatings}/>
     )
   }
 }

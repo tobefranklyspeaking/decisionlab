@@ -17,6 +17,7 @@ class Names extends React.Component {
     }
     this.submitNames = this.submitNames.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleChildChange = this.handleChildChange.bind(this);
   }
 
   handleChange(e, num) {
@@ -43,6 +44,11 @@ class Names extends React.Component {
     this.setState({ 'showChoices': true });
   }
 
+  handleChildChange(option, value) {
+
+    this.setState({ [option]: value })
+
+  }
 
   render() {
     return (
@@ -73,11 +79,11 @@ class Names extends React.Component {
                 <button
                   className='coin'
                   onClick={this.submitNames}>
-                    Submit names and move onto rankings
+                    Submit names and move onto options
                   </button>
             </form>
           </div>
-        : <AddChoices showRatings={this.state.showRatings} />
+        : <AddChoices handleChildChange={this.handleChildChange} showChoices={this.state.showChoices} showRatings={this.state.showRatings}/>
     )
   }
 }
