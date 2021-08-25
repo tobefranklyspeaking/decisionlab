@@ -10,7 +10,7 @@ class Advice extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='finalAdvice'>
         <div>1. Don’t stress</div>
         <div>2. Take some time to reflect</div>
         <div>3. Break down decisions into smaller pieces</div>
@@ -20,7 +20,6 @@ class Advice extends React.Component {
         <div>7. Talk it out</div>
         <div>8. Use this app</div>
         <a href='https://psychcentral.com/blog/15-tips-to-help-you-make-the-most-important-decisions#1' target='_blank'>Need more? Click me</a>
-
       </div>
     )
   }

@@ -53,37 +53,37 @@ class Names extends React.Component {
   render() {
     return (
       this.state.showName
-        ?  <div className='names'>
-            <label>Enter your name(s)</label>
-            <form>
-              <input
-                value={this.state.name1}
-                onChange={(e) => this.handleChange(e, '1')}
-                placeholder="Enter name here"
-              />
-              <input
-                value={this.state.name2}
-                onChange={(e) => this.handleChange(e, '2')}
-                placeholder="Enter name here"
-              />
-              <input
-                value={this.state.name3}
-                onChange={(e) => this.handleChange(e, '3')}
-                placeholder="Enter name here"
-              />
-              <input
-                value={this.state.name4}
-                onChange={(e) => this.handleChange(e, '4')}
-                placeholder="Enter name here"
-              />
-                <button
-                  className='coin'
-                  onClick={this.submitNames}>
-                    Submit names and move onto options
-                  </button>
-            </form>
-          </div>
-        : <AddChoices handleChildChange={this.handleChildChange} showChoices={this.state.showChoices} showRatings={this.state.showRatings}/>
+        ? <div className='names'>
+          <label>Enter your name(s)</label>
+          <form>
+            <input
+              value={this.state.name1}
+              onChange={(e) => this.handleChange(e, '1')}
+              placeholder="Enter name here"
+            />
+            <input
+              value={this.state.name2}
+              onChange={(e) => this.handleChange(e, '2')}
+              placeholder="Enter name here"
+            />
+            <input
+              value={this.state.name3}
+              onChange={(e) => this.handleChange(e, '3')}
+              placeholder="Enter name here"
+            />
+            <input
+              value={this.state.name4}
+              onChange={(e) => this.handleChange(e, '4')}
+              placeholder="Enter name here"
+            />
+            <button
+              className='coin'
+              onClick={this.submitNames}>
+              Submit names and move onto options
+            </button>
+          </form>
+        </div>
+        : <AddChoices handleChildChange={this.handleChildChange} showChoices={this.state.showChoices} names={this.state} showRatings={this.state.showRatings} />
     )
   }
 }

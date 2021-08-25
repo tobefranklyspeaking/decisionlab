@@ -29,7 +29,7 @@ class RandomActivity extends React.Component {
 
   render() {
       return (
-        <div>
+        <div className='final'>
         {
           this.state.activity
             && <div>{this.state.activity.data}</div>

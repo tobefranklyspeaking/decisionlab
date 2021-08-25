@@ -64,8 +64,8 @@ class DecideRating extends React.Component {
         ?
         <div className='options'>
           <label>Select and rate each option</label>
-          <form>
-            <Dropdown props={this.state} />
+          <form>{console.log(this.props)}
+            <Dropdown />
             <Selector className='nameOption' />
             <Dropdown />
             <Selector className='nameOption' />
@@ -80,9 +80,39 @@ class DecideRating extends React.Component {
             </button>
           </form>
         </div>
-        : <div className='Final'>Your best option is Taco Bell</div>
+        : <div className='final'>Your best option is Taco Bell</div>
     )
   }
 }
 
 export default DecideRating;
+
+// setRating(e) {
+//   this.setState({ [e.target.val]: e.target.value })
+// }
+
+// render() {
+//   return (
+//     this.props.showRatings
+//       ?
+//       <div className='options'>
+//         <label>Select and rate each option</label>
+//         <form>
+//           <Dropdown choices={this.props.choices.state}/>
+//           <Selector className='nameOption'  value={this.state.rating1} val='rating1'/>
+//           <Dropdown names={this.props.names.state}/>
+//           <Selector className='nameOption' onClick={this.setRating} value={this.state.rating2} val='rating1'/>
+//           <Dropdown names={this.props.names.state}/>
+//           <Selector className='nameOption' onClick={this.setRating} value={this.state.rating3} val='rating1'/>
+//           <Dropdown names={this.props.names.state}/>
+//           <Selector className='nameOption' onClick={this.setRating} value={this.state.rating4} val='rating1'/>
+//           <button
+//             className='coin'
+//             onClick={this.process}>
+//             Lets reveal the best option!
+//           </button>
+//         </form>
+//       </div>
+//       : <div className='final'>Your best option is Taco Bell</div>
+//   )
+// }

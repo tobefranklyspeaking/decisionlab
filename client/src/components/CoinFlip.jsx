@@ -21,7 +21,7 @@ class CoinFlip extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='final'>
         {Math.floor(Math.random() * 2) === 0
           ? <div className='fadeIn'>Heads</div>
           : <div className='fadeIn'>Tails</div>

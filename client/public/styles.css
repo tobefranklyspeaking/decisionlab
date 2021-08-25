@@ -110,3 +110,39 @@ button:hover {
   margin-bottom: 1vh;
   padding: 2vh;
 }
+
+.final {
+  background-color: hsla(154, 100%, 9%, 70%);
+  color: hsla(48, 100%, 50%, 100%);
+  border-radius: 5vh;
+  font-size: 5vh;
+  margin-bottom: 1vh;
+  padding: 2vh;
+}
+
+.final div{
+  background-color: hsla(154, 100%, 9%, 70%);
+  color: hsla(48, 100%, 50%, 100%);
+  border-radius: 5vh;
+  font-size: 5vh;
+  margin-bottom: 1vh;
+  padding: 2vh;
+}
+
+.finalAdvice {
+  background-color: hsla(154, 100%, 9%, 70%);
+  color: hsla(48, 100%, 50%, 100%);
+  border-radius: 5vh;
+  font-size: 4vh;
+  margin-bottom: 1vh;
+  padding: 2vh;
+}
+
+.finalAdvice div{
+  background-color: hsla(154, 100%, 9%, 70%);
+  color: hsla(48, 100%, 50%, 100%);
+  border-radius: 5vh;
+  font-size: 4vh;
+  margin-bottom: 1vh;
+  padding: 2vh;
+}

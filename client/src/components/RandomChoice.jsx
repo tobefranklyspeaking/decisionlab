@@ -77,7 +77,7 @@ class RandomChoice extends React.Component {
                   </button>
             </form>
           </div>
-        : <div>{this.state.choice ? this.state.choice : 'Try again'}</div>
+        : <div className='final'>{this.state.choice ? this.state.choice : 'Try again'}</div>
     )
   }
 }
