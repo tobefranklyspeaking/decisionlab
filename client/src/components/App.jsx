@@ -24,7 +24,6 @@ class App extends React.Component {
           ? <button onClick={this.toggleWelcomeVisible} id='welcome' className='.fadeIn'>Welcome, lets make some decisions</button>
           : <Options/>
         }
-
       </div>
     )
   }
