@@ -9,6 +9,7 @@ body, button, div, .options, #coin, form, input, a {
   color: #f2f3d9;
   flex-direction: column;
   border-radius: 5vh;
+  font-size: 3vh;
 }
 
 body {
@@ -55,15 +56,25 @@ button {
 }
 
 form {
-  background-color: #151E3F;
   border-radius: 4v
 }
 
 input {
+  outline: none;
   background-color: #656256;
   color: #F2F3D9;
+  margin: 2vh;
+  padding: 1vh 2vh 1vh 2vh;
+  width: 80%;
+  height: auto;
+  font-size: 3vh;
 }
 
 a:hover {
   color: blue;
+}
+
+button:hover {
+  color: #656256;
+  background-color: #F2F3D9;
 }

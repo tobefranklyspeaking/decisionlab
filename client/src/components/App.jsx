@@ -18,10 +18,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id='nav' className='.fadeIn'>
+      <div>
         {
           this.state.welcomeVisible
-          ? <button onClick={this.toggleWelcomeVisible}>Welcome, lets make some decisions</button>
+          ? <button onClick={this.toggleWelcomeVisible} id='welcome' className='.fadeIn'>Welcome, lets make some decisions</button>
           : <Options/>
         }
 

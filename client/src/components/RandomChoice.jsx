@@ -74,6 +74,7 @@ class RandomChoice extends React.Component {
                 <button
                   className='coin'
                   onClick={this.choose}>
+                    Click me so you know what you're doing
                   </button>
             </form>
           </div>
