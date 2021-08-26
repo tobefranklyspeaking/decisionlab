@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Dropdown = ({ props }) => {
-  console.log(props);
+const Dropdown = ( props ) => {
   return (
     <div className="dropdown">
+      {console.log(this.props)}
       <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
         Select your options
       </button>

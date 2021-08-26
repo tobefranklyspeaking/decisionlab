@@ -53,22 +53,22 @@ class AddChoices extends React.Component {
             <input
               value={this.state.choice1}
               onChange={(e) => this.handleChange(e, '1')}
-              placeholder="Enter choice here"
+              placeholder="Enter option here"
             />
             <input
               value={this.state.choice2}
               onChange={(e) => this.handleChange(e, '2')}
-              placeholder="Enter choice here"
+              placeholder="Enter option here"
             />
             <input
               value={this.state.choice3}
               onChange={(e) => this.handleChange(e, '3')}
-              placeholder="Enter choice here"
+              placeholder="Enter option here"
             />
             <input
               value={this.state.choice4}
               onChange={(e) => this.handleChange(e, '4')}
-              placeholder="Enter choice here"
+              placeholder="Enter option here"
             />
             <button
               className='coin'
@@ -77,7 +77,7 @@ class AddChoices extends React.Component {
             </button>
           </form>
         </div>
-        : <DecideRating handleChildChange={this.props.handleChildChange} names={this.props.state} choices={this.state} showRatings={this.props.showRatings} />
+        : <DecideRating handleChildChange={this.props.handleChildChange} names={this.props} choices={this.state} showRatings={this.props.showRatings} />
     )
   }
 }

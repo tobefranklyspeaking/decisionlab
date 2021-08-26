@@ -65,8 +65,8 @@ class DecideRating extends React.Component {
         <div className='options'>
           <label>Select and rate each option</label>
           <form>{console.log(this.props)}
-            <Dropdown />
-            <Selector className='nameOption' />
+            <Dropdown choices={this.props.choices}/>
+            <Selector className='nameOption' choices={this.props.choices}/>
             <Dropdown />
             <Selector className='nameOption' />
             <Dropdown />

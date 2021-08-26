@@ -12,8 +12,7 @@ class Names extends React.Component {
       showName: true,
       showRatings: false,
       showChoices: false,
-      list: [],
-      options: []
+      personList: []
     }
     this.submitNames = this.submitNames.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -39,7 +38,8 @@ class Names extends React.Component {
         temp1.push(this.state[temp[i]]);
       }
     }
-    this.setState({ 'options': temp1 })
+
+    this.setState({ 'personList': temp1 })
     this.setState({ 'showName': false })
     this.setState({ 'showChoices': true });
   }
@@ -83,7 +83,7 @@ class Names extends React.Component {
             </button>
           </form>
         </div>
-        : <AddChoices handleChildChange={this.handleChildChange} showChoices={this.state.showChoices} names={this.state} showRatings={this.state.showRatings} />
+        : <AddChoices handleChildChange={this.handleChildChange} showChoices={this.state.showChoices} names={this.state.personList} showRatings={this.state.showRatings} />
     )
   }
 }
