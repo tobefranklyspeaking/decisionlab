@@ -16,9 +16,13 @@ class AddChoices extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
+
   handleChange(e, num) {
+    e.preventDefault();
+    console.log(e, num)
     this.setState({ [`choice${num}`]: e.target.value })
   }
+
 
   submitOptions(e) {
     e.preventDefault();
@@ -37,7 +41,6 @@ class AddChoices extends React.Component {
     }
     const choiceState = this.props.showChoices;
     let ratingsState = this.props.showRatings;
-
     this.setState({ 'options': temp1 })
     this.props.handleChildChange('showChoices', false);
     this.props.handleChildChange('showRatings', true);
@@ -49,25 +52,26 @@ class AddChoices extends React.Component {
       this.props.showChoices
         ? <div className='names'>
           <label>Enter your options</label>
+          {console.log(this.props)}
           <form>
             <input
-              value={this.state.choice1}
-              onChange={(e) => this.handleChange(e, '1')}
+              value={this.state.choice1} num='1'
+              onChange={this.handleChange}
               placeholder="Enter option here"
             />
             <input
-              value={this.state.choice2}
-              onChange={(e) => this.handleChange(e, '2')}
+              value={this.state.choice2} num='2'
+              onChange={this.handleChange}
               placeholder="Enter option here"
             />
             <input
-              value={this.state.choice3}
-              onChange={(e) => this.handleChange(e, '3')}
+              value={this.state.choice3} num='3'
+              onChange={this.handleChange}
               placeholder="Enter option here"
             />
             <input
-              value={this.state.choice4}
-              onChange={(e) => this.handleChange(e, '4')}
+              value={this.state.choice4} num='4'
+              onChange={this.handleChange}
               placeholder="Enter option here"
             />
             <button
