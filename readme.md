@@ -1,9 +1,9 @@
-- [Overview](#Ohhh-Decisions)
+- [Overview](#DecisionLab)
 - [Install](#Installation)
 - [Usage](#Usage)
 - [Contribute](#Contributing)
 
-# Ohhh Decisions
+# DecisionLab
 
 This app is for any group of 2+ people to make decision making easier.
 
@@ -28,7 +28,7 @@ If not already installed, use the following steps to get started.
 
 - [ ]  Once prerequisites are complete, start by cloning:
 ```
-git clone https://github.com/tobefranklyspeaking/ohhhdecisions.git
+git clone https://github.com/tobefranklyspeaking/decisionlab
 ```
 - [ ]  Navigate to the directory where you downloaded this repository process the following commands:
 ```

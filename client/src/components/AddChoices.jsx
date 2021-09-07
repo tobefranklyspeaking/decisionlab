@@ -19,7 +19,6 @@ class AddChoices extends React.Component {
 
   handleChange(e, num) {
     e.preventDefault();
-    console.log(e, num)
     this.setState({ [`choice${num}`]: e.target.value })
   }
 
@@ -52,7 +51,6 @@ class AddChoices extends React.Component {
       this.props.showChoices
         ? <div className='names'>
           <label>Enter your options</label>
-          {console.log(this.props)}
           <form>
             <input
               value={this.state.choice1} num='1'
