@@ -2,6 +2,7 @@
   font-family: 'Sora', sans-serif;
 }
 
+/* File requires update to remove redundancy */
 body, button, div, .options, #coin, form, input, a {
   display: flex;
   align-items: center;
