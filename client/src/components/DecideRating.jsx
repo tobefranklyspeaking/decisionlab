@@ -2,6 +2,9 @@ import React from 'react';
 import Selector from './Select.jsx';
 import Dropdown from './Dropdown.jsx';
 
+// Form for user input
+// Requires algorithm update
+
 class DecideRating extends React.Component {
   constructor(props) {
     super(props);
