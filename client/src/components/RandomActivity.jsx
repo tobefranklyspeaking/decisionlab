@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+// Gives user a completely random activity to do, pulled from API
+
 class RandomActivity extends React.Component {
   constructor(props) {
     super(props);
