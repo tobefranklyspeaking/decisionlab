@@ -1,5 +1,7 @@
 import React from 'react';
 
+// Mvp options for user display
+
 const Dropdown = ( props ) => {
   return (
     <div className="dropdown">
