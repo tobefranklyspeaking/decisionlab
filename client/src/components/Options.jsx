@@ -5,6 +5,7 @@ import RandomChoice from './RandomChoice.jsx';
 import RandomActivity from './RandomActivity.jsx';
 import Advice from './Advice.jsx';
 
+// App uses state management instead of routing
 class Options extends React.Component {
   constructor(props) {
     super(props);

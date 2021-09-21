@@ -1,5 +1,7 @@
 import React from 'react';
 
+// Simple advice to help people make decisions
+
 const Advice = () => {
   return (
     <div className='finalAdvice'>

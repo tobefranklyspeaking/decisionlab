@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Requires animation for coin flip
 class RandomChoice extends React.Component {
   constructor(props) {
     super(props);

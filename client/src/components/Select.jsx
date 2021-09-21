@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Used to update user rating
 class Select extends React.Component {
   constructor(props) {
     super(props);

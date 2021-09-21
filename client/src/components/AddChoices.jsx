@@ -1,6 +1,9 @@
 import React from 'react';
 import DecideRating from './DecideRating.jsx';
 
+// Component used to collect user choices or options for
+// what they want help deciding
+
 class AddChoices extends React.Component {
   constructor(props) {
     super(props);

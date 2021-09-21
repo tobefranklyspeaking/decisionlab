@@ -1,13 +1,12 @@
 import React from 'react';
 
+// Need to add animation for coin flip
 class CoinFlip extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       sideShowing: null
     }
-
-
   }
 
   coinFlip() {
