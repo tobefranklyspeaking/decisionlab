@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import Options from './Options.jsx';
 
+// App is MVP for client presentation
+
 class App extends React.Component {
   constructor(props) {
     super(props);
