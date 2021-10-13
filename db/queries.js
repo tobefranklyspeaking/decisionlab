@@ -1,6 +1,7 @@
 const Pool = require('pg').Pool;
 
-//
+// Please fill this database login information in or app
+// will not work
 const POSTGRES_DB_LOGIN = {
   host: "fill_me_in",
   user: "fill_me_in",
