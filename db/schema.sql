@@ -1,3 +1,5 @@
+-- Schema to create decisions database, data will be input and updated from running app as normal
+
 create database decisions;
 
 \c decisions;
